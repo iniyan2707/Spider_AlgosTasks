@@ -8,7 +8,7 @@
 using namespace std;
 
 
-int parser(string);
+long long int parser(string);
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
     int n = 0, i = 0;
     cin >> n;
     string str1[n];
-    int int1[n];
+    long long int int1[n];
     while(i<n){
         cin>>str1[i];
         int1[i]=parser(str1[i]);
@@ -33,10 +33,10 @@ int main()
 
 
 
-int parser(string s)
+long long int parser(string s)
 {
-    int countLesser = 0, countGreater = 0;
-    int counter = 0;
+    long long int countLesser = 0, countGreater = 0;
+    long long int counter = 0;
     for(int j = 0; s[j] != '\0'; j++){
         if(s[j]=='<'){
             if(j==0 || countGreater == 0){
